@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Morrison Eli" />
+    <meta
+      name="description"
+      content="Set and manage your fitness goals with FitDash. Customize daily targets for steps, water intake, calories, and sleep to match your personal health objectives."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>FitDash | Fitness Goals setting</title>
+    <link rel="icon" href="images/favicon4.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link
+      rel="stylesheet"
+      media="(min-width: 768px)"
+      href="styles/medium.css"
+    />
+    <link
+      rel="stylesheet"
+      media="(min-width: 1024px)"
+      href="styles/large.css"
+    />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <img
+        src="images/fitdash.jpg"
+        data-src="images/fitness-hero.jpg"
+        alt="Fitness dashboard tracking"
+        loading="lazy"
+        width="100"
+      />
+      <span>Welcome, User!</span>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="goals.html">Goals</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <main class="goals-container">
+      <h1>FitDash | Goals setting</h1>
+      <h3>Set Your Goals</h3>
+      <div class="goal-form">
+        <div class="form-group">
+          <label for="steps-goal">Daily Steps:</label>
+          <input
+            type="number"
+            id="steps-goal"
+            min="1000"
+            step="500"
+            value="10000"
+          />
+        </div>
+        <div class="form-group">
+          <label for="water-goal">Water Glasses:</label>
+          <input type="number" id="water-goal" min="1" max="20" value="8" />
+        </div>
+        <div class="form-group">
+          <label for="calories-goal">Calories Burned:</label>
+          <input
+            type="number"
+            id="calories-goal"
+            min="100"
+            step="50"
+            value="650"
+          />
+        </div>
+        <div class="form-group">
+          <label for="sleep-goal">Sleep Hours:</label>
+          <input
+            type="number"
+            id="sleep-goal"
+            min="4"
+            max="12"
+            step="0.5"
+            value="8"
+          />
+        </div>
+        <button id="save-goals" class="save-btn">Save Goals</button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="contact-info">
+        <p><strong>FitDash</strong></p>
+        <p>Trans-Amadi, Port Harcourt, Rivers Nigeria.<br /></p>
+        <p>Phone: (+234) 90 1101 0392</p>
+      </div>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/morrison.morris.77" target="_blank"
+          ><img src="images/logo-facebook.svg" alt="Facebook"
+        /></a>
+        <a href="https://x.com/Elite_Morrison" target="_blank"
+          ><img src="images/logo-twitter.svg" alt="Twitter"
+        /></a>
+        <a href="https://www.linkedin.com/in/morrisoneli/" target="_blank"
+          ><img src="images/logo-linkedin.svg" alt="LinkedIn"
+        /></a>
+      </div>
+      <div class="footer-note">
+        <p>WDD330 Class Project<br />Morrison Eli</p>
+        <p>&copy; <span id="year"></span> FitDash</p>
+      </div>
+    </footer>
+
+    <script src="scripts/mobile-menu.js"></script>
+    <script src="scripts/goals.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+@media (min-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+    }
+
+    .stats-card {
+        grid-row: 1;
+    }
+
+    .chart-container {
+        grid-column: span 3;
+        grid-row: 2;
+    }
+
+    .weather-widget {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    .health-tip {
+        grid-column: span 4;
+    }
+}

@@ -1,0 +1,474 @@
+:root {
+  --primary-color: #4a6fa5;
+  --secondary-color: #166088;
+  --accent-color: #4fc3f7;
+  --background-color: #f8f9fa;
+  --card-color: #ffffff;
+  --text-color: #333333;
+  --success-color: #4caf50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+.hero-content {
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(74, 111, 165, 0.1),
+    rgba(22, 96, 136, 0.1)
+  );
+  z-index: -1;
+}
+
+.hero.loaded::before {
+  background:
+    linear-gradient(to bottom, rgba(74, 111, 165, 0.1), rgba(22, 96, 136, 0.1)),
+    url("../images/fitness-hero.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Feature cards hover effect */
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: white;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Features Section */
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: var(--card-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Dashboard Styles */
+.dashboard-header {
+  background-color: var(--secondary-color);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  background-color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+}
+
+.main-nav li {
+  margin-right: 1.5rem;
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.main-nav a:hover,
+.main-nav a:active {
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.main-nav .active a {
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.stats-card {
+  background-color: var(--card-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(var(--accent-color) 0% 65%, #e0e0e0 65% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.progress-circle span {
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.water-bottle {
+  width: 60px;
+  height: 100px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  margin: 1rem auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.water-fill {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--accent-color);
+  transition: height 0.3s ease;
+}
+
+.water-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.water-controls button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.water-controls button:hover {
+  background-color: var(--accent-color);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--success-color);
+  transition: width 0.3s ease;
+}
+
+.sleep-display span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.sleep-controls input {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.chart-container,
+.health-tip {
+  background-color: var(--card-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#refresh-tip {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+#refresh-tip:hover {
+  background-color: var(--accent-color);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Navigation */
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 4rem;
+  }
+
+  .main-nav.active {
+    left: 0;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .main-nav li {
+    margin: 1rem 0;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+}
+
+/* Goals and Profile Page Styles */
+.goals-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.goal-form {
+  background-color: var(--card-color);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.save-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/*  */
+#foodInput {
+  padding: 8px;
+  margin: 5px 0;
+  width: 100%;
+}
+
+#searchFoodBtn,
+#loadWorkouts {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+#searchFoodBtn:hover,
+#loadWorkouts:hover {
+  background-color: var(--accent-color);
+}
+
+#foodResult,
+#workoutList {
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 14px;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer .contact-info,
+footer .footer-note,
+footer .social-icons {
+  margin-bottom: 1rem;
+}
+
+footer .social-icons img {
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5rem;
+}

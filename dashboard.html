@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Morrison Eli" />
+    <meta
+      name="description"
+      content="FitDash Dashboard - Monitor your fitness metrics in real-time. Track daily steps, hydration, calories burned, and sleep quality with intuitive visualizations."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>FitDash | Dashboard</title>
+    <link rel="icon" href="images/favicon4.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/base.css" />
+/>
+    <inkl
+      rel="stylesheet"
+         <link
+      rel="stylesheet"
+      media="(min-width: 768px)"
+      href="styles/medium.css"
+     media="(min-width: 1024px)"
+      href="styles/large.css"
+    />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <img
+        src="images/fitdash.jpg"
+        data-src="images/fitness-hero.jpg"
+        alt="Fitness dashboard tracking"
+        loading="lazy"
+        width="100"
+      />
+      <span>Welcome, User!</span>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="goals.html">Goals</a></li>
+        <li class="active"><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>FitDash | Dashboard</h1>
+      <div class="dashboard-grid">
+        <!-- Stats Cards -->
+        <section class="stats-card" id="steps-card">
+          <h3>Steps</h3>
+          <div class="progress-circle" id="steps-progress">
+            <span>6,842</span>
+          </div>
+          <p>Goal: 10,000</p>
+        </section>
+
+        <section class="stats-card" id="water-card">
+          <h3>Water</h3>
+          <div class="water-bottle">
+            <div class="water-fill" style="height: 50%"></div>
+          </div>
+          <div class="water-controls">
+            <button class="water-minus">-</button>
+            <span>4/8 glasses</span>
+            <button class="water-plus">+</button>
+          </div>
+        </section>
+
+        <section class="stats-card" id="calories-card">
+          <h3>Calories</h3>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 65%"></div>
+          </div>
+          <p>420/650 kcal</p>
+        </section>
+
+        <section class="stats-card" id="sleep-card">
+          <h3>Sleep</h3>
+          <div class="sleep-display"><span>7.5</span> hours</div>
+          <div class="sleep-controls">
+            <input type="range" min="4" max="12" step="0.5" value="7.5" />
+          </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="chart-container">
+          <h2>Weekly Activity</h2>
+          <canvas id="activity-chart"></canvas>
+        </section>
+
+        <!-- Health Tip -->
+        <section class="health-tip">
+          <h2>Daily Health Tip</h2>
+          <div id="tip-content">
+            <p>Loading tip...</p>
+          </div>
+          <button id="refresh-tip">New Tip</button>
+        </section>
+
+        <!--  -->
+        <!-- Food Search (Nutritionix API) -->
+        <section class="stats-card">
+          <h3>Food Search 🍎</h3>
+
+          <input type="text" id="foodInput" placeholder="Enter food..." />
+          <button id="searchFoodBtn">Search</button>
+
+          <div id="foodResult"></div>
+        </section>
+
+        <!-- Exercise Finder (ExerciseDB API) -->
+        <section class="stats-card">
+          <h3>Workout Finder 💪</h3>
+
+          <button id="loadWorkouts">Load Exercises</button>
+
+          <div id="workoutList"></div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="contact-info">
+        <p><strong>FitDash</strong></p>
+        <p>Trans-Amadi, Port Harcourt, Rivers Nigeria.<br /></p>
+        <p>Phone: (+234) 90 1101 0392</p>
+      </div>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/morrison.morris.77" target="_blank"
+          ><img src="images/logo-facebook.svg" alt="Facebook"
+        /></a>
+        <a href="https://x.com/Elite_Morrison" target="_blank"
+          ><img src="images/logo-twitter.svg" alt="Twitter"
+        /></a>
+        <a href="https://www.linkedin.com/in/morrisoneli/" target="_blank"
+          ><img src="images/logo-linkedin.svg" alt="LinkedIn"
+        /></a>
+      </div>
+      <div class="footer-note">
+        <p>WDD330 Class Project<br />Morrison Eli</p>
+        <p>&copy; <span id="year"></span> FitDash</p>
+      </div>
+    </footer>
+
+    <script src="scripts/mobile-menu.js"></script>
+    <script src="scripts/healthTips.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/nutrition.js"></script>
+    <script src="scripts/exercise.js"></script>
+  </body>
+</html>

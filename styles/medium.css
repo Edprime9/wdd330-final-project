@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chart-container {
+        grid-column: span 2;
+    }
+}

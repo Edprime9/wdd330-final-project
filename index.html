@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Morrison Eli" />
+    <meta
+      name="description"
+      content="FitDash - Your personal fitness tracking dashboard. Track steps, water intake, calories burned, and sleep patterns to achieve your health goals."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>FitDash | Your Fitness Dashboard</title>
+    <link rel="icon" href="images/favicon4.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link
+      rel="stylesheet"
+      media="(min-width: 768px)"
+      href="styles/medium.css"
+    />
+    <link
+      rel="stylesheet"
+      media="(min-width: 1024px)"
+      href="styles/large.css"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="dashboard-header">
+        <div class="hamburger" id="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <img
+          src="images/fitdash.jpg"
+          data-src="images/fitness-hero.jpg"
+          alt="Fitness dashboard tracking"
+          loading="lazy"
+          width="100"
+        />
+      </div>
+
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content">
+        <p>Transform Your Fitness Journey</p>
+        <p>
+          Track, analyze, and improve your health with our comprehensive
+          dashboard
+        </p>
+        <a href="dashboard.html" class="cta-button">Get Started Today</a>
+      </div>
+    </header>
+    <main>
+      <h1>FitDash | Your Fitness Dashboard</h1>
+      <div class="features">
+        <section class="feature-card">
+          <div class="icon">🚶‍♂️</div>
+          <h3>Step Tracking</h3>
+          <p>
+            Monitor your daily steps and reach your goals with our intuitive
+            tracker.
+          </p>
+        </section>
+        <section class="feature-card">
+          <div class="icon">💧</div>
+          <h3>Water Intake</h3>
+          <p>Stay hydrated throughout the day with personalized reminders.</p>
+        </section>
+        <section class="feature-card">
+          <div class="icon">🔥</div>
+          <h3>Calories Burned</h3>
+          <p>Track your activity calories and see your progress over time.</p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="contact-info">
+        <p><strong>FitDash</strong></p>
+        <p>Trans-Amadi, Port Harcourt, Rivers Nigeria.</p>
+        <p>Phone: (+234) 90 1101 0392</p>
+      </div>
+      <div class="social-icons">
+        <a
+          href="https://web.facebook.com/morrison.morris.77"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <img src="images/logo-facebook.svg" alt="Facebook" />
+        </a>
+        <a
+          href="https://x.com/Elite_Morrison"
+          target="_blank"
+          aria-label="Twitter"
+        >
+          <img src="images/logo-twitter.svg" alt="Twitter" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/morrisoneli/"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <img src="images/logo-linkedin.svg" alt="LinkedIn" />
+        </a>
+      </div>
+      <div class="footer-note">
+        <p>WDD330 Class Project<br />Morrison Eli</p>
+        <p>&copy; <span id="year"></span> FitDash</p>
+      </div>
+    </footer>
+
+    <script src="scripts/mobile-menu.js"></script>
+  </body>
+</html>
